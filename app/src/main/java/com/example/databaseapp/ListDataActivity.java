@@ -69,15 +69,6 @@ public class ListDataActivity extends AppCompatActivity {
             products.remove(position);
             dbHelper.deleteProduct(deletedProduct);
             Toast.makeText(ListDataActivity.this, "Delete Success", Toast.LENGTH_SHORT).show();
-//            adapter.notifyItemRemoved(position);
-//            Snackbar.make(rv, deletedProduct.getName(), Snackbar.LENGTH_LONG).
-//                    setAction("Undo", new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    products.add(position, deletedProduct);
-//                    adapter.notifyItemInserted(position);
-//                }
-//            });
         }
     };
 }
