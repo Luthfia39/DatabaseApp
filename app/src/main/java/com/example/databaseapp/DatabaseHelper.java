@@ -112,7 +112,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void deleteProduct(Product product){
-//
         SQLiteDatabase db = getWritableDatabase();
         db.delete(PRODUCT_TABLE, PRODUCT_ID +"=?",
                 new String[] {String.valueOf(product.getId())});
