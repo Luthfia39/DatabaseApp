@@ -67,8 +67,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 PRODUCT_NAME + "=?",
                 new String[]{name}, null, null, null);
 
-
         if (cursor != null){
+//            move cursor to the first row
             cursor.moveToFirst();
         }
 //        parameter get berdasarkan urutan new String pada cursor di atas
@@ -85,9 +85,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         SQLiteDatabase db = getReadableDatabase();
         String selectQuery = "SELECT * from " + PRODUCT_TABLE;
-//        looping ambil data hingga habis
         Cursor cursor = db.rawQuery(selectQuery, null);
 
+//        looping ambil data hingga habis
         if (cursor.moveToFirst()){
             do {
                 Product product = new Product();

@@ -26,7 +26,12 @@ public class UpdateActivity extends AppCompatActivity {
         productPrice = findViewById(R.id.input_price);
 
         Intent intent = getIntent();
-        String id = intent.getStringExtra("PRODUCT").toString();
+        String id = intent.getStringExtra("PRODUCT_ID").toString();
+        String name = intent.getStringExtra("PRODUCT_NAME").toString();
+        String price = intent.getStringExtra("PRODUCT_PRICE").toString();
+
+        productName.setText(name);
+        productPrice.setText(price);
 
         findViewById(R.id.btn_update).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +57,7 @@ public class UpdateActivity extends AppCompatActivity {
                 dbHelper.updateProduct(product);
                 Toast.makeText(UpdateActivity.this, "Update Success", Toast.LENGTH_LONG).show();
             }
+            Toast.makeText(UpdateActivity.this, "Update Not Success", Toast.LENGTH_LONG).show();
         }
-        Toast.makeText(UpdateActivity.this, "Update Not Successful", Toast.LENGTH_LONG).show();
     }
 }

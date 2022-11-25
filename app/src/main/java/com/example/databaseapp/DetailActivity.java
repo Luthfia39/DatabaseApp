@@ -32,7 +32,9 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent_update = new Intent(view.getContext(), UpdateActivity.class);
-                intent_update.putExtra("PRODUCT", productID);
+                intent_update.putExtra("PRODUCT_ID", productID);
+                intent_update.putExtra("PRODUCT_NAME", productName);
+                intent_update.putExtra("PRODUCT_PRICE", productPrice);
                 startActivity(intent_update);
             }
         });
