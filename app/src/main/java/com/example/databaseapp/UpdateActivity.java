@@ -57,7 +57,6 @@ public class UpdateActivity extends AppCompatActivity {
                 dbHelper.updateProduct(product);
                 Toast.makeText(UpdateActivity.this, "Update Success", Toast.LENGTH_LONG).show();
             }
-            Toast.makeText(UpdateActivity.this, "Update Not Success", Toast.LENGTH_LONG).show();
         }
     }
 }
